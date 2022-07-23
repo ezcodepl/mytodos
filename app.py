@@ -74,7 +74,6 @@ def about():  # put application's code here
     lista = ['python', 'html', 'flask']
     return render_template('about.html', imie='Ernest', nazwisko='Zając', email='ernest.zajac@gmail.com', lista=lista)
 
-
 @app.route('/examples')
 def examples():  # put application's code here
     result = athlete_dao.get_all()
