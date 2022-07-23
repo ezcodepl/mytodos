@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+{% block content %}
+<div class="container">
+<br /><br />
+<table class="table table-sm">
+    <thead class="table-dark">
+    <tr>
+        <th>Id</th>
+        <th>Zadanie</th>
+        <th>Opis</th>
+        <th>Utworzono</th>
+        <th>Priorytet</th>
+        <th>Akcje</th>
+    </tr>
+    </thead>
+
+    {% for a in data %}
+    <tr>
+        <td>{{ a.todo_id }}</td>
+         <td>{% if a.status==1 %} <s>{{ a.todo_title }}</s> {% else %} {{ a.todo_title }} {% endif %}</td>
+        <td>{% if a.status==1 %} <s>{{ a.todo_description }}</s> {% else %} {{ a.todo_description }} {% endif %}</td>
+        <td>{{ a.create_at }}</td>
+        <td>
+            {% if a.priority == 1 %}
+            <span style="color: red"><b>{{ a.priority }}</b></span>
+            {% elif a.priority == 2 %}
+            <span style="color: orange"><b>{{ a.priority }}</b></span>
+            {% else %}
+            <span style="color: green"><b>{{ a.priority }}</b></span>
+            {% endif %}
+
+        </td>
+        <td>
+          {% if a.status==0 %}
+             <a class="btn-sm btn-info text-decoration-none" href="#">Wykonaj</a>
+          {% else %}
+           
+          {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

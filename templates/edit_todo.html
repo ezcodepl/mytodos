@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+{% block content %}
+<div class="container">
+
+<h4>Edytuj zadanie</h4>
+{{ id }}
+<form method="post">
+    <table>
+
+        <tr>
+            <td>Tytuł</td>
+            <td><input class="form-control" typ="text" name="title" value="{{ edit.todo_title }}" /></td>
+        </tr>
+        <tr>
+            <td>Opis</td>
+            <td><textarea class="form-control" typ="text" name="description" value="{{ edit.todo_description }}" />{{ edit.todo_description }}</textarea></td>
+        </tr>
+        <tr>
+            <td>Priorytet</td>
+            <td>
+                <input type="text" class="form-control" name="priority" value="{{ edit.priority }}" />
+            </td>
+        </tr>
+        <tr>
+            <td><input type="hidden" values="{{id}}" name="id" /> </td>
+            <td><input class="btn btn-success" style="width:120px;" type="submit" value="Zapisz"/></td>
+        </tr>
+    </table>
+</form>
+</div>
+{% endblock %}

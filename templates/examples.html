@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important { color: #336699; }
+
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+<h4>Przykłady</h4>
+<h4>Moja liczba: {{ some_number }}</h4>
+<ul>
+    {% for l in lista %}
+    {% if l =="python" %}
+    <li>{{ l }}</li>
+    {% else %}
+    <li>{{ l }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+    <table class="table table-sm">
+        <thead class="table-dark">
+        <tr>
+            <th>Id zawodnika</th>
+            <th>Imię zawodnika</th>
+            <th>Nazwisko zawodnika</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        {% for a in data %}
+        <tr>
+            <td>{{ a.athlete_id }}</td>
+            <td>{{ a.first_name }}</td>
+            <td>{{ a.last_name }}</td>
+            <td>
+                <a class="btn-sm btn-primary text-decoration-none" href="/athlete_details?id={{ a.athlete_id }}">Pokaż szczegóły</a>
+                <a class="btn-sm btn-success text-decoration-none" href="/athlete_details?id={{ a.athlete_id }}">Edytuj</a>
+                <a class="btn-sm btn-danger text-decoration-none" href="/athlete_details?id={{ a.athlete_id }}">Usuń</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+    {% endblock %}

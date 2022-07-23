@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h5>O Programie</h5>
+    <h6>Autor: {{ imie }} {{ nazwisko }}</h6>
+    <h6>E-mail: {{ email }}</h6>
+    <h6>Język w jakim zostła napisana aplikacja:
+        {% for l in lista %}
+         {% if l =="python" %}
+           {{ l.title() }} + Flask + Bootstrap
+         {% endif %}
+     {% endfor %}
+    </h6>
+
+<!--    <ol class="ul">-->
+<!--        {% for l in lista %}-->
+<!--        {% if l =="python" %}-->
+<!--        <li><b>{{ l }}</b></li>-->
+<!--        {% elif l=='flask' %}-->
+<!--        <li><u>{{ l }}</u></li>-->
+<!--        {% else %}-->
+<!--        <li>{{ l }}</li>-->
+<!--        {% endif %}-->
+<!--        {% endfor %}-->
+<!--    </ol>-->
+</div>
+  {% endblock %}

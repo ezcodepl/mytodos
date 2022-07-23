@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+{% block content %}
+<div class="container">
+<h4>Dodaj nowe zadanie</h4>
+
+<form method="post">
+    <table>
+        <tr>
+            <td>Tytuł</td>
+            <td><input class="form-control" typ="text" name="title"/></td>
+        </tr>
+        <tr>
+            <td>Opis</td>
+            <td><textarea class="form-control" name="description"/></textarea></td>
+        </tr>
+        <tr>
+            <td>Priorytet</td>
+            <td>
+                <select class="form-control" name="priority">
+                    <option value="3" style="color: green;"><b>3 Niski</b></option>
+                    <option value="2" style="color: orange;"><b>2 Średni</b></option>
+                    <option value="1" style="color: red;"><b>1 Wysoki</b></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input class="btn btn-success" style="width:120px;" type="submit" value="Zapisz"/></td>
+        </tr>
+    </table>
+</form>
+</div>
+{% endblock %}
