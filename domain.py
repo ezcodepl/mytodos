@@ -1,20 +1,3 @@
-class Athlete:
-    athlete_id=None
-    first_name=None
-    last_name=None
-    height=None
-    weight=None
-
-    def __init__(self, athlete_id, first_name, last_name, height, weight):
-        self.athlete_id = athlete_id
-        self.first_name = first_name
-        self.last_name = last_name
-        self.height = height
-        self. weight = weight
-
-    def __str__(self):
-        return str(self.__dict__)
-
 class Todos:
     todo_id = None
     todo_title= None
