@@ -10,7 +10,7 @@ todo_dao.get_all_msql()
 
 @app.route('/')
 def index():  # put application's code here
-    return render_template('index.html', data=todo_dao.get_all_msql())
+    return render_template('index.html', data=todo_dao.get_all())
 
 
 @app.route('/todos')
