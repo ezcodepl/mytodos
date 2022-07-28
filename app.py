@@ -6,7 +6,6 @@ from todo_dao import Todos
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
 
-todo_dao.get_all_msql()
 
 @app.route('/')
 def index():  # put application's code here
@@ -21,7 +20,6 @@ def todos():  # put application's code here
 @app.route('/todos_details')
 def todos_details():  # put application's code here
     id = request.args.get('id')
-    # print(f'Szczegóły zadania o id={id}')
     a = todo_dao.get_one(id)
 
     if a.priority == 1:
@@ -55,7 +53,6 @@ def add_todo_post():  # put application's code here
 @app.route('/edit_todo')
 def edit_todo():  # put application's code here
     id = request.args.get('id')
-    # print(f'Szczegóły zadania o id={id}')
     e = todo_dao.get_one(id)
     return render_template('edit_todo.html', edit=e)
 
@@ -77,7 +74,6 @@ def edit_todo_post():  # put application's code here
 @app.route('/del_todo')
 def del_todo():  # put application's code here
     id = request.args.get('id')
-    # print(f'Szczegóły zadania o id={id}')
     todo_dao.del_todo(id)
     return redirect('/todos')
 
