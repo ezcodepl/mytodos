@@ -1,6 +1,6 @@
 # mytodos
 
-A simple application that saves tasks into a database written in ***Python + Flask + MySql***
+A simple application that saves tasks into a database written in ***Python + Flask + MySql + Bootstrap 5***
 
 If you want to store tasks in the Postgres database you must change the port in ***todo_dao.py*** file 
 from ***3306(MySQL) on 5432(Postrgres)***. <br>
