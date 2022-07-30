@@ -12,6 +12,14 @@ def index():  # put application's code here
     return render_template('index.html', data=todo_dao.get_all())
 
 
+@app.route('/exe_todo')
+def exe_todo():  # put application's code here
+    id = request.args.get('id')
+    status = request.args.get('status')
+    todo_dao.del_todo(id, status)
+    return redirect('/')
+
+
 @app.route('/todos')
 def todos():  # put application's code here
     return render_template('todos.html', data=todo_dao.get_all())

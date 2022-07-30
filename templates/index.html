@@ -36,9 +36,9 @@
             </td>
             <td>
                 {% if a.status==0 %}
-                <a class="btn-sm btn-info text-decoration-none" href="#">Wykonaj</a>
+                <a class="btn-sm btn-info text-decoration-none" href="/exec_todo?id={{a.todo_id}}&status={{a.status}}">Wykonaj</a>
                 {% else %}
-
+                 <span><img style="width:25px;margin-left:20px;" src="https://www.svgrepo.com/show/401167/ballot-box-with-check.svg" /></span>
                 {% endif %}
             </td>
         </tr>

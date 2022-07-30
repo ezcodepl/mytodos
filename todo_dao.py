@@ -54,3 +54,10 @@ def get_all_front():
         result.append(a)
     connection.close()
     return result
+
+def exe_todo(id, status):
+    sql = f"update todos set status = '1' where todo_id='{id}' "
+    connection = mysql.connector.connect(host='localhost', port=3306, database='test', user='root', password='')
+    cursor = connection.cursor()
+    cursor.execute(sql)
+    connection.commit()
