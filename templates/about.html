@@ -9,7 +9,7 @@
     <h5>O Programie</h5>
     <h6>Autor: {{ imie }} {{ nazwisko }}</h6>
     <h6>E-mail: {{ email }}</h6>
-    <h6>Język w jakim zostła napisana aplikacja:
+    <h6>Język w jakim została napisana aplikacja:
         {% for l in lista %}
          {% if l =="python" %}
            {{ l.title() }} + Flask + Bootstrap

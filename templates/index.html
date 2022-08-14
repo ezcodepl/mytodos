@@ -25,7 +25,7 @@
             <td>{% if a.status==1 %} <s>{{ a.todo_description }}</s> {% else %} {{ a.todo_description }} {% endif %}
             </td>
             <td>{{ a.create_at }}</td>
-            <td>
+            <td class="text-center">
                 {% if a.priority == 1 %}
                 <span style="color: red"><b>{{ a.priority }}</b></span>
                 {% elif a.priority == 2 %}
