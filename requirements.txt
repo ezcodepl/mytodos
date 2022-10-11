@@ -2,7 +2,7 @@
 # Usage: pip install -r requirements.txt
 
 # Flask Framework
-Bootstrap-Flask	2.0.2
+Bootstrap-Flask==2.0.2
 Flask==2.0.2
 Jinja2==3.1.2
 Mako==1.2.1
@@ -23,22 +23,12 @@ itsdangerous==2.1.2
 mysql-connector-python==8.0.30
 passlib==1.7.4
 pip==22.2.1
-protobuf==4.21.4
-psycopg2==2.9.3
+psycopg2==2.9.4
 py==1.11.0
-pycparserv2.21
 setuptools==63.2.0
 wheel==0.37.1
 
-# Flask Packages
-Flask-Login==0.4.0
-Flask-Mail==0.9.1
-Flask-Migrate==2.0.2
-Flask-SQLAlchemy==2.4.0
-Flask-Script==2.0.5
-Flask-User==1.0.2.2
-Flask-WTF==0.14.2
 
 # Automated test
-pytest==3.0.5
+pytest==4.6
 pytest-cov==3.0.0
