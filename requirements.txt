@@ -26,7 +26,7 @@ pip==22.2.1
 psycopg2==2.9.4
 py==1.11.0
 setuptools==63.2.0
-wheel==0.37.1
+wheel==0.38.1
 
 
 # Automated test
